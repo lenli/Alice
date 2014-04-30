@@ -29,6 +29,7 @@
 		87D2039D19117AA800F25C5C /* LCLTicketDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D2039C19117AA800F25C5C /* LCLTicketDetailViewController.m */; };
 		87D203A019117BA600F25C5C /* LCLTicketDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D2039F19117BA600F25C5C /* LCLTicketDataStore.m */; };
 		87D203A519117E7A00F25C5C /* LCLAliceAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D203A419117E7A00F25C5C /* LCLAliceAPIClient.m */; };
+		87D203AB191189D500F25C5C /* LCLTicketDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D203AA191189D500F25C5C /* LCLTicketDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		87D2039F19117BA600F25C5C /* LCLTicketDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLTicketDataStore.m; sourceTree = "<group>"; };
 		87D203A319117E7A00F25C5C /* LCLAliceAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCLAliceAPIClient.h; sourceTree = "<group>"; };
 		87D203A419117E7A00F25C5C /* LCLAliceAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLAliceAPIClient.m; sourceTree = "<group>"; };
+		87D203A9191189D500F25C5C /* LCLTicketDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCLTicketDataManager.h; sourceTree = "<group>"; };
+		87D203AA191189D500F25C5C /* LCLTicketDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLTicketDataManager.m; sourceTree = "<group>"; };
 		9109F8F2302B4B0FAC8592AA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -196,6 +199,8 @@
 			children = (
 				87D2039E19117BA600F25C5C /* LCLTicketDataStore.h */,
 				87D2039F19117BA600F25C5C /* LCLTicketDataStore.m */,
+				87D203A9191189D500F25C5C /* LCLTicketDataManager.h */,
+				87D203AA191189D500F25C5C /* LCLTicketDataManager.m */,
 				87D203A319117E7A00F25C5C /* LCLAliceAPIClient.h */,
 				87D203A419117E7A00F25C5C /* LCLAliceAPIClient.m */,
 				87D20370191172E200F25C5C /* Alice.xcdatamodeld */,
@@ -340,6 +345,7 @@
 				87D203A019117BA600F25C5C /* LCLTicketDataStore.m in Sources */,
 				87D2039D19117AA800F25C5C /* LCLTicketDetailViewController.m in Sources */,
 				87D2036F191172E200F25C5C /* LCLAppDelegate.m in Sources */,
+				87D203AB191189D500F25C5C /* LCLTicketDataManager.m in Sources */,
 				87D20372191172E200F25C5C /* Alice.xcdatamodeld in Sources */,
 				87D2039719117A8300F25C5C /* LCLLoginViewController.m in Sources */,
 				87D2036B191172E200F25C5C /* main.m in Sources */,
