@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D5535E3FBCE4D968080EFD9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9109F8F2302B4B0FAC8592AA /* libPods.a */; };
 		87D2035D191172E200F25C5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D2035C191172E200F25C5C /* Foundation.framework */; };
 		87D2035F191172E200F25C5C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D2035E191172E200F25C5C /* CoreGraphics.framework */; };
 		87D20361191172E200F25C5C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87D20360191172E200F25C5C /* UIKit.framework */; };
@@ -23,6 +24,11 @@
 		87D20386191172E200F25C5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87D20384191172E200F25C5C /* InfoPlist.strings */; };
 		87D20388191172E200F25C5C /* AliceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D20387191172E200F25C5C /* AliceTests.m */; };
 		87D203941911739E00F25C5C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87D203931911739E00F25C5C /* Storyboard.storyboard */; };
+		87D2039719117A8300F25C5C /* LCLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D2039619117A8300F25C5C /* LCLLoginViewController.m */; };
+		87D2039A19117A9E00F25C5C /* LCLTicketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D2039919117A9E00F25C5C /* LCLTicketsViewController.m */; };
+		87D2039D19117AA800F25C5C /* LCLTicketDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D2039C19117AA800F25C5C /* LCLTicketDetailViewController.m */; };
+		87D203A019117BA600F25C5C /* LCLTicketDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D2039F19117BA600F25C5C /* LCLTicketDataStore.m */; };
+		87D203A519117E7A00F25C5C /* LCLAliceAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D203A419117E7A00F25C5C /* LCLAliceAPIClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A2209B20FAA4D5C91037284 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		87D20359191172E200F25C5C /* Alice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87D2035C191172E200F25C5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		87D2035E191172E200F25C5C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +62,17 @@
 		87D20385191172E200F25C5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		87D20387191172E200F25C5C /* AliceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliceTests.m; sourceTree = "<group>"; };
 		87D203931911739E00F25C5C /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		87D2039519117A8300F25C5C /* LCLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCLLoginViewController.h; sourceTree = "<group>"; };
+		87D2039619117A8300F25C5C /* LCLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLLoginViewController.m; sourceTree = "<group>"; };
+		87D2039819117A9E00F25C5C /* LCLTicketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCLTicketsViewController.h; sourceTree = "<group>"; };
+		87D2039919117A9E00F25C5C /* LCLTicketsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLTicketsViewController.m; sourceTree = "<group>"; };
+		87D2039B19117AA800F25C5C /* LCLTicketDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCLTicketDetailViewController.h; sourceTree = "<group>"; };
+		87D2039C19117AA800F25C5C /* LCLTicketDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLTicketDetailViewController.m; sourceTree = "<group>"; };
+		87D2039E19117BA600F25C5C /* LCLTicketDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCLTicketDataStore.h; sourceTree = "<group>"; };
+		87D2039F19117BA600F25C5C /* LCLTicketDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLTicketDataStore.m; sourceTree = "<group>"; };
+		87D203A319117E7A00F25C5C /* LCLAliceAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCLAliceAPIClient.h; sourceTree = "<group>"; };
+		87D203A419117E7A00F25C5C /* LCLAliceAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLAliceAPIClient.m; sourceTree = "<group>"; };
+		9109F8F2302B4B0FAC8592AA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +84,7 @@
 				87D20363191172E200F25C5C /* CoreData.framework in Frameworks */,
 				87D20361191172E200F25C5C /* UIKit.framework in Frameworks */,
 				87D2035D191172E200F25C5C /* Foundation.framework in Frameworks */,
+				6D5535E3FBCE4D968080EFD9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +109,7 @@
 				87D20381191172E200F25C5C /* AliceTests */,
 				87D2035B191172E200F25C5C /* Frameworks */,
 				87D2035A191172E200F25C5C /* Products */,
+				6A2209B20FAA4D5C91037284 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +130,7 @@
 				87D20360191172E200F25C5C /* UIKit.framework */,
 				87D20362191172E200F25C5C /* CoreData.framework */,
 				87D2037A191172E200F25C5C /* XCTest.framework */,
+				9109F8F2302B4B0FAC8592AA /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,8 +140,9 @@
 			children = (
 				87D2036D191172E200F25C5C /* LCLAppDelegate.h */,
 				87D2036E191172E200F25C5C /* LCLAppDelegate.m */,
+				87D203A219117BC300F25C5C /* Models */,
+				87D203A119117BB600F25C5C /* Controllers */,
 				87D20373191172E200F25C5C /* Images.xcassets */,
-				87D20370191172E200F25C5C /* Alice.xcdatamodeld */,
 				87D20365191172E200F25C5C /* Supporting Files */,
 				87D203931911739E00F25C5C /* Storyboard.storyboard */,
 			);
@@ -156,6 +178,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		87D203A119117BB600F25C5C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				87D2039519117A8300F25C5C /* LCLLoginViewController.h */,
+				87D2039619117A8300F25C5C /* LCLLoginViewController.m */,
+				87D2039819117A9E00F25C5C /* LCLTicketsViewController.h */,
+				87D2039919117A9E00F25C5C /* LCLTicketsViewController.m */,
+				87D2039B19117AA800F25C5C /* LCLTicketDetailViewController.h */,
+				87D2039C19117AA800F25C5C /* LCLTicketDetailViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		87D203A219117BC300F25C5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				87D2039E19117BA600F25C5C /* LCLTicketDataStore.h */,
+				87D2039F19117BA600F25C5C /* LCLTicketDataStore.m */,
+				87D203A319117E7A00F25C5C /* LCLAliceAPIClient.h */,
+				87D203A419117E7A00F25C5C /* LCLAliceAPIClient.m */,
+				87D20370191172E200F25C5C /* Alice.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87D2038B191172E200F25C5C /* Build configuration list for PBXNativeTarget "Alice" */;
 			buildPhases = (
+				5F83C258CDEC4355A7114962 /* Check Pods Manifest.lock */,
 				87D20355191172E200F25C5C /* Sources */,
 				87D20356191172E200F25C5C /* Frameworks */,
 				87D20357191172E200F25C5C /* Resources */,
+				458F669A34CA40C181656039 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,13 +297,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		458F669A34CA40C181656039 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F83C258CDEC4355A7114962 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		87D20355191172E200F25C5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87D203A519117E7A00F25C5C /* LCLAliceAPIClient.m in Sources */,
+				87D2039A19117A9E00F25C5C /* LCLTicketsViewController.m in Sources */,
+				87D203A019117BA600F25C5C /* LCLTicketDataStore.m in Sources */,
+				87D2039D19117AA800F25C5C /* LCLTicketDetailViewController.m in Sources */,
 				87D2036F191172E200F25C5C /* LCLAppDelegate.m in Sources */,
 				87D20372191172E200F25C5C /* Alice.xcdatamodeld in Sources */,
+				87D2039719117A8300F25C5C /* LCLLoginViewController.m in Sources */,
 				87D2036B191172E200F25C5C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +456,7 @@
 		};
 		87D2038C191172E200F25C5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A2209B20FAA4D5C91037284 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -382,6 +470,7 @@
 		};
 		87D2038D191172E200F25C5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A2209B20FAA4D5C91037284 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -452,6 +541,7 @@
 				87D2038D191172E200F25C5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87D2038E191172E200F25C5C /* Build configuration list for PBXNativeTarget "AliceTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +550,7 @@
 				87D20390191172E200F25C5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
