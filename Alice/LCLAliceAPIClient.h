@@ -9,5 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface LCLAliceAPIClient : NSObject
++ (instancetype)sharedClient;
+- (void) postAuthenticationWithUser:(NSString *)usernameString
+                       withPassword:(NSString *)passwordString
+                         Completion:(void (^)(NSDictionary *))completion;
 
 @end
