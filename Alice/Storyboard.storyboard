@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Login-->
+        <!--Login View Controller - Login-->
         <scene sceneID="s23-Mh-lTT">
             <objects>
-                <viewController id="khL-DO-8Bi" sceneMemberID="viewController">
+                <viewController id="khL-DO-8Bi" customClass="LCLLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vqa-U9-eSr"/>
                         <viewControllerLayoutGuide type="bottom" id="N6d-2r-pfS"/>
@@ -39,12 +39,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4o-St-bTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="724" y="142"/>
+            <point key="canvasLocation" x="101" y="159"/>
         </scene>
-        <!--View Controller - Tasks-->
+        <!--Ticket Detail View Controller - Ticket Detail-->
+        <scene sceneID="JUp-IN-7Hh">
+            <objects>
+                <viewController id="7JX-gn-NWk" customClass="LCLTicketDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="25V-Gv-gYg"/>
+                        <viewControllerLayoutGuide type="bottom" id="1A1-Cl-BZA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2m5-wL-s5L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ticket Detail" id="5X0-cv-Leb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hr8-Kt-2a1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1106" y="159"/>
+        </scene>
+        <!--Tickets View Controller - Tickets-->
         <scene sceneID="Xtm-bD-Di0">
             <objects>
-                <viewController id="rgG-QM-7bo" sceneMemberID="viewController">
+                <viewController id="rgG-QM-7bo" customClass="LCLTicketsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nup-NQ-i8v"/>
                         <viewControllerLayoutGuide type="bottom" id="OXi-CY-PkE"/>
@@ -58,24 +77,27 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="CB6-qy-Nve">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="taskCell" id="CB6-qy-Nve">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CB6-qy-Nve" id="R1K-cK-PcW">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="7JX-gn-NWk" kind="push" id="kZ5-At-8fH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tasks" id="nAs-6n-dG5"/>
+                    <navigationItem key="navigationItem" title="Tickets" id="nAs-6n-dG5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1o-eY-5L9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1232" y="142"/>
+            <point key="canvasLocation" x="609" y="159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g6H-6E-Vza">
@@ -93,7 +115,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bql-Gp-sNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="198" y="142"/>
+            <point key="canvasLocation" x="-425" y="159"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
