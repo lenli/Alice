@@ -68,10 +68,17 @@
     [self.aliceAPIClient postAuthenticationWithUser:usernameString
                                        withPassword:passwordString
                                          Completion:^(NSDictionary *successObject) {
-        
+         completionBlock(YES);
     }];
 }
 
+- (void) getTicketsWithCompletion:(void (^)(BOOL isSuccessful))completionBlock
+{
+    [self.aliceAPIClient getTicketsWithCompletion:^(NSDictionary *ticketDictionary) {
+        
+        completionBlock(YES);
+    }];
+}
 
 
 

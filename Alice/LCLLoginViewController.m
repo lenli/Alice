@@ -8,6 +8,7 @@
 
 #import "LCLLoginViewController.h"
 #import "LCLTicketDataManager.h"
+#import "MBProgressHUD.h"
 
 @interface LCLLoginViewController ()
 
@@ -43,10 +44,13 @@
 - (IBAction)loginButtonTapped:(UIButton *)sender
 {
     
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [self.dataManager authenticateWithUsername:self.usernameTextField.text
                                   withPassword:self.passwordTextField.text
                                 withCompletion:^(BOOL isSuccessful) {
-        
+        [self.dataManager getTicketsWithCompletion:^(BOOL isSuccessful) {
+            [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        }];
     }];
 }
 

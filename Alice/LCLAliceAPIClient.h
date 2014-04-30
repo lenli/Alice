@@ -13,5 +13,5 @@
 - (void) postAuthenticationWithUser:(NSString *)usernameString
                        withPassword:(NSString *)passwordString
                          Completion:(void (^)(NSDictionary *successObject))completion;
-
+- (void) getTicketsWithCompletion:(void (^)(NSDictionary *ticketDictionary))completion;
 @end

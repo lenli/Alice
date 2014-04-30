@@ -50,7 +50,7 @@
                        withPassword:(NSString *)passwordString
                Completion:(void (^)(NSDictionary *))completion
 {
-    NSString *aliceUserLoginURL = [NSString stringWithFormat:@"%@/app_auth?ajax=true", self.baseURLString];
+    NSString *aliceUserLoginURL = [NSString stringWithFormat:@"%@app_auth?ajax=true", self.baseURLString];
     NSURL *url = [NSURL URLWithString:aliceUserLoginURL];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -74,11 +74,41 @@
         NSLog(@"Session Cookie: %@", [[NSUserDefaults standardUserDefaults] valueForKey:@"sessionCookies"]);
         completion(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Alice Post Error: %@",error);
+        NSLog(@"Alice Post Error On User: %@",error);
     }];
     
     [newOp start];
 }
+
+- (void) getTicketsWithCompletion:(void (^)(NSDictionary *ticketDictionary))completion
+{
+    NSString *aliceTicketURL = [NSString stringWithFormat:@"%@employeeView/loadTickets", self.baseURLString];
+    NSURL *url = [NSURL URLWithString:aliceTicketURL];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    AFHTTPRequestOperation *newOp = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    request.HTTPMethod = @"GET";
+    
+    [self loadCookies];
+    [newOp setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSError *error = nil;
+        NSDictionary *ticketDictionary = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                                         options:NSJSONReadingAllowFragments
+                                                                           error:&error];
+        NSLog(@"Alice Ticket Dictionary: %@", ticketDictionary);
+        if (error) {
+            NSLog(@"JSON Serialization Error On Tickets: %@", error);
+        }
+        completion(ticketDictionary);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Alice Get Error On Tickets: %@",error);
+    }];
+    
+    [newOp start];
+}
+
+#pragma mark - Cookie Helper Methods
 
 - (void)saveCookies{
     

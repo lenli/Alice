@@ -23,4 +23,6 @@
 - (void) authenticateWithUsername:(NSString *)usernameString
                      withPassword:(NSString *)passwordString
                    withCompletion:(void (^)(BOOL isSuccessful))completionBlock;
+- (void) getTicketsWithCompletion:(void (^)(BOOL isSuccessful))completionBlock;
+
 @end
