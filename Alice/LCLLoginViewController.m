@@ -7,11 +7,13 @@
 //
 
 #import "LCLLoginViewController.h"
-#import "LCLAliceAPIClient.h"
+#import "LCLTicketDataManager.h"
 
 @interface LCLLoginViewController ()
+
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (strong, nonatomic) LCLTicketDataManager *dataManager;
 
 @end
 
@@ -29,7 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.dataManager = [LCLTicketDataManager sharedManager];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,6 +43,11 @@
 - (IBAction)loginButtonTapped:(UIButton *)sender
 {
     
+    [self.dataManager authenticateWithUsername:self.usernameTextField.text
+                                  withPassword:self.passwordTextField.text
+                                withCompletion:^(BOOL isSuccessful) {
+        
+    }];
 }
 
 

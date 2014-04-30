@@ -63,9 +63,15 @@
     request.HTTPMethod = @"POST";
     
     [newOp setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"Alice Post Response Object: %@",responseObject);
+        NSError *error = nil;
+        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:&error];
+        if (error) {
+            NSLog(@"JSON Serialization Error on User: %@", error);
+        }
+
+        NSLog(@"Alice Post Response Object: %@",responseDictionary);
         [self saveCookies];
-        NSLog(@"%@", [[NSUserDefaults standardUserDefaults] valueForKey:@"sessionCookies"]);
+        NSLog(@"Session Cookie: %@", [[NSUserDefaults standardUserDefaults] valueForKey:@"sessionCookies"]);
         completion(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Alice Post Error: %@",error);

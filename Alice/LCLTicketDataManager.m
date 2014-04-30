@@ -60,5 +60,19 @@
     return _sharedManager;
 }
 
+#pragma mark - User Methods
+- (void) authenticateWithUsername:(NSString *)usernameString
+                     withPassword:(NSString *)passwordString
+                   withCompletion:(void (^)(BOOL isSuccessful))completionBlock
+{
+    [self.aliceAPIClient postAuthenticationWithUser:usernameString
+                                       withPassword:passwordString
+                                         Completion:^(NSDictionary *successObject) {
+        
+    }];
+}
+
+
+
 
 @end

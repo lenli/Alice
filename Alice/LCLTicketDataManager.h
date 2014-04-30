@@ -20,4 +20,7 @@
 - (instancetype)initWithAliceAPIClient:(LCLAliceAPIClient *)aliceClient
                   managedObjectContext:(NSManagedObjectContext *)managedObjectContext
                              dataStore:(LCLTicketDataStore *)dataStore;
+- (void) authenticateWithUsername:(NSString *)usernameString
+                     withPassword:(NSString *)passwordString
+                   withCompletion:(void (^)(BOOL isSuccessful))completionBlock;
 @end

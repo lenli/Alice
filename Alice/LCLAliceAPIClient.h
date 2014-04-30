@@ -12,6 +12,6 @@
 + (instancetype)sharedClient;
 - (void) postAuthenticationWithUser:(NSString *)usernameString
                        withPassword:(NSString *)passwordString
-                         Completion:(void (^)(NSDictionary *))completion;
+                         Completion:(void (^)(NSDictionary *successObject))completion;
 
 @end
