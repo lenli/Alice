@@ -17,6 +17,7 @@
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @property (strong, nonatomic) NSFetchedResultsController *ticketFRController;
+@property (strong, nonatomic) Ticket *currentTicket;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;

@@ -67,7 +67,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"ticketsToTicketDetailSegue" sender:self];
+    Ticket *selectedticket = [self.dataStore.ticketFRController objectAtIndexPath:indexPath];
+    [self selectCurrentTicket:selectedticket
+               WithCompletion:^(BOOL isSuccessful) {
+       [self performSegueWithIdentifier:@"ticketsToTicketDetailSegue" sender:self];
+    }];
 }
 
 #pragma mark - FetchedResultsController Methods
@@ -136,6 +140,13 @@
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView beginUpdates];
+}
+
+- (void) selectCurrentTicket:(Ticket *)selectedTicket
+              WithCompletion:(void (^)(BOOL isSuccessful))completionBlock
+{
+    self.dataStore.currentTicket = selectedTicket;
+    completionBlock(YES);
 }
 
 @end

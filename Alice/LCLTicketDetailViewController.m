@@ -7,9 +7,15 @@
 //
 
 #import "LCLTicketDetailViewController.h"
+#import "LCLTicketDataStore.h"
 
 @interface LCLTicketDetailViewController ()
 
+@property (strong, nonatomic) LCLTicketDataStore *dataStore;
+@property (weak, nonatomic) IBOutlet UILabel *idLabel;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ticketLabel;
+@property (weak, nonatomic) IBOutlet UILabel *doneLabel;
 @end
 
 @implementation LCLTicketDetailViewController
@@ -26,7 +32,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.dataStore = [LCLTicketDataStore sharedDataStore];
+    self.idLabel.text = [NSString stringWithFormat:@"%@",self.dataStore.currentTicket.id];
+    self.statusLabel.text = self.dataStore.currentTicket.status;
+    self.ticketLabel.text = self.dataStore.currentTicket.ticketType;
+    self.doneLabel.text = [NSString stringWithFormat:@"%@",self.dataStore.currentTicket.isDone];
+    
 }
 
 - (void)didReceiveMemoryWarning
