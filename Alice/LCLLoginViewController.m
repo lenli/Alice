@@ -33,6 +33,7 @@
 {
     [super viewDidLoad];
     self.dataManager = [LCLTicketDataManager sharedManager];
+    
 }
 
 - (void)didReceiveMemoryWarning

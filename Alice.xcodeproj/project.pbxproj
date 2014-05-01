@@ -30,6 +30,10 @@
 		87D203A019117BA600F25C5C /* LCLTicketDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D2039F19117BA600F25C5C /* LCLTicketDataStore.m */; };
 		87D203A519117E7A00F25C5C /* LCLAliceAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D203A419117E7A00F25C5C /* LCLAliceAPIClient.m */; };
 		87D203AB191189D500F25C5C /* LCLTicketDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D203AA191189D500F25C5C /* LCLTicketDataManager.m */; };
+		87D203B41912AC6D00F25C5C /* Ticket+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D203B31912AC6D00F25C5C /* Ticket+Methods.m */; };
+		87D203B71912AC7B00F25C5C /* Facility+Methods.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D203B61912AC7B00F25C5C /* Facility+Methods.m */; };
+		87D203BA1912B43700F25C5C /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D203B91912B43700F25C5C /* Ticket.m */; };
+		87D203BD1912B43800F25C5C /* Facility.m in Sources */ = {isa = PBXBuildFile; fileRef = 87D203BC1912B43800F25C5C /* Facility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,14 @@
 		87D203A419117E7A00F25C5C /* LCLAliceAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLAliceAPIClient.m; sourceTree = "<group>"; };
 		87D203A9191189D500F25C5C /* LCLTicketDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCLTicketDataManager.h; sourceTree = "<group>"; };
 		87D203AA191189D500F25C5C /* LCLTicketDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCLTicketDataManager.m; sourceTree = "<group>"; };
+		87D203B21912AC6D00F25C5C /* Ticket+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ticket+Methods.h"; sourceTree = "<group>"; };
+		87D203B31912AC6D00F25C5C /* Ticket+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Ticket+Methods.m"; sourceTree = "<group>"; };
+		87D203B51912AC7B00F25C5C /* Facility+Methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Facility+Methods.h"; sourceTree = "<group>"; };
+		87D203B61912AC7B00F25C5C /* Facility+Methods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Facility+Methods.m"; sourceTree = "<group>"; };
+		87D203B81912B43700F25C5C /* Ticket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
+		87D203B91912B43700F25C5C /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
+		87D203BB1912B43800F25C5C /* Facility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facility.h; sourceTree = "<group>"; };
+		87D203BC1912B43800F25C5C /* Facility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Facility.m; sourceTree = "<group>"; };
 		9109F8F2302B4B0FAC8592AA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -203,6 +215,14 @@
 				87D203AA191189D500F25C5C /* LCLTicketDataManager.m */,
 				87D203A319117E7A00F25C5C /* LCLAliceAPIClient.h */,
 				87D203A419117E7A00F25C5C /* LCLAliceAPIClient.m */,
+				87D203B81912B43700F25C5C /* Ticket.h */,
+				87D203B91912B43700F25C5C /* Ticket.m */,
+				87D203B21912AC6D00F25C5C /* Ticket+Methods.h */,
+				87D203B31912AC6D00F25C5C /* Ticket+Methods.m */,
+				87D203BB1912B43800F25C5C /* Facility.h */,
+				87D203BC1912B43800F25C5C /* Facility.m */,
+				87D203B51912AC7B00F25C5C /* Facility+Methods.h */,
+				87D203B61912AC7B00F25C5C /* Facility+Methods.m */,
 				87D20370191172E200F25C5C /* Alice.xcdatamodeld */,
 			);
 			name = Models;
@@ -342,12 +362,16 @@
 			files = (
 				87D203A519117E7A00F25C5C /* LCLAliceAPIClient.m in Sources */,
 				87D2039A19117A9E00F25C5C /* LCLTicketsViewController.m in Sources */,
+				87D203B71912AC7B00F25C5C /* Facility+Methods.m in Sources */,
 				87D203A019117BA600F25C5C /* LCLTicketDataStore.m in Sources */,
 				87D2039D19117AA800F25C5C /* LCLTicketDetailViewController.m in Sources */,
+				87D203BA1912B43700F25C5C /* Ticket.m in Sources */,
 				87D2036F191172E200F25C5C /* LCLAppDelegate.m in Sources */,
 				87D203AB191189D500F25C5C /* LCLTicketDataManager.m in Sources */,
 				87D20372191172E200F25C5C /* Alice.xcdatamodeld in Sources */,
+				87D203BD1912B43800F25C5C /* Facility.m in Sources */,
 				87D2039719117A8300F25C5C /* LCLLoginViewController.m in Sources */,
+				87D203B41912AC6D00F25C5C /* Ticket+Methods.m in Sources */,
 				87D2036B191172E200F25C5C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

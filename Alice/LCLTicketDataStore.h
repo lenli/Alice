@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Ticket+Methods.h"
+#import "Facility+Methods.h"
 
 @interface LCLTicketDataStore : NSObject
 
