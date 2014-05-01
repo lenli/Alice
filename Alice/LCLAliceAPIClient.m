@@ -69,9 +69,9 @@
             NSLog(@"JSON Serialization Error on User: %@", error);
         }
 
-        NSLog(@"Alice Post Response Object: %@",responseDictionary);
+//        NSLog(@"Alice Post Response Object: %@",responseDictionary);
         [self saveCookies];
-        NSLog(@"Session Cookie: %@", [[NSUserDefaults standardUserDefaults] valueForKey:@"sessionCookies"]);
+//        NSLog(@"Session Cookie: %@", [[NSUserDefaults standardUserDefaults] valueForKey:@"sessionCookies"]);
         completion(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Alice Post Error On User: %@",error);
@@ -96,7 +96,7 @@
         NSDictionary *ticketDictionary = [NSJSONSerialization JSONObjectWithData:responseObject
                                                                          options:NSJSONReadingAllowFragments
                                                                            error:&error];
-        NSLog(@"Alice Ticket Dictionary: %@", ticketDictionary);
+//        NSLog(@"Alice Ticket Dictionary: %@", ticketDictionary);
         if (error) {
             NSLog(@"JSON Serialization Error On Tickets: %@", error);
         }

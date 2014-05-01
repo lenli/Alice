@@ -75,7 +75,16 @@
 - (void) getTicketsWithCompletion:(void (^)(BOOL isSuccessful))completionBlock
 {
     [self.aliceAPIClient getTicketsWithCompletion:^(NSDictionary *ticketDictionary) {
-        
+        NSArray *tickets = ticketDictionary[@"records"];
+        for (NSDictionary *ticket in tickets) {
+            [Ticket ticketWithId:ticket[@"id"]
+                      withStatus:ticket[@"status"]
+                        withType:ticket[@"ticketType"]
+                          isDone:(BOOL)ticket[@"done"]
+                       inContext:self.dataStore.managedObjectContext];
+            [self.dataStore saveContext];
+            NSLog(@"Ticket: %@",ticket);
+        }
         completionBlock(YES);
     }];
 }
