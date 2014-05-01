@@ -31,11 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.dataStore = [LCLTicketDataStore sharedDataStore];
-    self.dataManager = [LCLTicketDataManager sharedManager];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.dataStore.ticketFRController.delegate = self;
+    [self initialize];
 }
 
 - (void)didReceiveMemoryWarning
@@ -142,11 +138,22 @@
     [self.tableView beginUpdates];
 }
 
+#pragma mark - Helper Methods
+
+- (void) initialize
+{
+    self.dataStore = [LCLTicketDataStore sharedDataStore];
+    self.dataManager = [LCLTicketDataManager sharedManager];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.dataStore.ticketFRController.delegate = self;
+}
+
 - (void) selectCurrentTicket:(Ticket *)selectedTicket
               WithCompletion:(void (^)(BOOL isSuccessful))completionBlock
 {
     self.dataStore.currentTicket = selectedTicket;
-    completionBlock(YES);
+    if (selectedTicket) completionBlock(YES);
 }
 
 @end

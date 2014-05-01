@@ -32,12 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.dataStore = [LCLTicketDataStore sharedDataStore];
-    self.idLabel.text = [NSString stringWithFormat:@"%@",self.dataStore.currentTicket.id];
-    self.statusLabel.text = self.dataStore.currentTicket.status;
-    self.ticketLabel.text = self.dataStore.currentTicket.ticketType;
-    self.doneLabel.text = [NSString stringWithFormat:@"%@",self.dataStore.currentTicket.isDone];
-    
+    [self initialize];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,15 +41,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)initialize
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    self.dataStore = [LCLTicketDataStore sharedDataStore];
+    self.idLabel.text = [NSString stringWithFormat:@"%@",self.dataStore.currentTicket.id];
+    self.statusLabel.text = self.dataStore.currentTicket.status;
+    self.ticketLabel.text = self.dataStore.currentTicket.ticketType;
+    self.doneLabel.text = [NSString stringWithFormat:@"%@",self.dataStore.currentTicket.isDone];
 }
-*/
-
 @end
