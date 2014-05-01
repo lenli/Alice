@@ -66,6 +66,7 @@
         NSError *error = nil;
         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:&error];
         if (error) {
+            
             NSLog(@"JSON Serialization Error on User: %@", error);
         }
 

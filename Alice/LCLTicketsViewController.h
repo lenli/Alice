@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LCLTicketsViewController : UIViewController
+@interface LCLTicketsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 
 @end

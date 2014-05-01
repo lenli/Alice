@@ -37,8 +37,8 @@
         NSFetchRequest *ticketFetch = [[NSFetchRequest alloc] initWithEntityName:@"Ticket"];
         ticketFetch.fetchBatchSize = 20;
         
-        NSSortDescriptor *ticketDate = [[NSSortDescriptor alloc] initWithKey:@"dateCreated" ascending:YES];
-        ticketFetch.sortDescriptors = @[ticketDate];
+        NSSortDescriptor *ticketId = [[NSSortDescriptor alloc] initWithKey:@"id" ascending:YES];
+        ticketFetch.sortDescriptors = @[ticketId];
         
         [NSFetchedResultsController deleteCacheWithName:@"ticketCache"];
         _ticketFRController = [[NSFetchedResultsController alloc] initWithFetchRequest:ticketFetch managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"ticketCache"];

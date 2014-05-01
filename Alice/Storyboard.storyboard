@@ -36,7 +36,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="khL-DO-8Bi" eventType="touchUpInside" id="vNZ-Ac-h5k"/>
-                                    <segue destination="rgG-QM-7bo" kind="push" id="Yyd-Lv-Ebr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,6 +45,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="dpX-10-CKv" id="fVc-DB-0ec"/>
                         <outlet property="usernameTextField" destination="N5t-Mv-BxV" id="HHV-M1-7tN"/>
+                        <segue destination="rgG-QM-7bo" kind="push" identifier="loginToTicketsSegue" id="FOr-co-7pX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4o-St-bTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,16 +88,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="taskCell" id="CB6-qy-Nve">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ticketCell" id="CB6-qy-Nve">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CB6-qy-Nve" id="R1K-cK-PcW">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="7JX-gn-NWk" kind="push" id="kZ5-At-8fH"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -105,6 +102,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tickets" id="nAs-6n-dG5"/>
+                    <connections>
+                        <outlet property="tableView" destination="iwU-5m-iEx" id="tjl-ok-pMa"/>
+                        <segue destination="7JX-gn-NWk" kind="push" identifier="ticketsToTicketDetailSegue" id="zLU-4j-Xhl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1o-eY-5L9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
